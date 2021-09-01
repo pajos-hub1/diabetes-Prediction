@@ -1,0 +1,142 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style type= text/css>
+            body{
+            background-image: url("{% static 'img/diabetes.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background:linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+            height: 700px
+        }
+        .main{
+            position: fixed;
+            background-color: cadetblue;
+            border-radius: 10px;
+            align-items: center;
+            align: center;
+            width: 250px;
+            background: #fff;
+            padding: 50px;
+            margin: 100px auto;
+            border-radius: 30px;
+            position: relative;
+
+        }
+        h1{
+            color: #0086b3;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            background-color: #4dc3ff;
+            border: 2px;
+            color: darkgoldenrod;
+            padding: 8px 16px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            padding: 15px 15px;
+            resize: none;
+        }
+
+        .form,
+            .form-items{
+            width: 100%;
+            }
+
+            .form-items .input{
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 15px 40px;
+            box-sizing: border-box;
+            background: #ebeef1;
+            border: 0px;
+            outline: none;
+            border-radius: 30px;
+            }
+
+
+.form-items .input.message{
+  height: 125px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding: 15px 15px;
+  resize: none;
+}
+
+.btn{
+  background: #827ffe;
+  text-align: center;
+  color: #fff;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn .fas{
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.form-items{
+  position: relative;
+}
+
+.form-items .fas{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #9a99aa;
+}
+
+        </style>
+</head>
+<body>
+   
+    <div align = 'center' class ="main">
+       <a href="http://localhost/odm/dashboard/dashboard" style="text-decoration: none;" form="form1" value="http://localhost/odm/dashboard/dashboard" class="btn">Dashboard
+</a></br></br>
+        PREDICTION: </br> <h2 color = "red">{{result2}}</h2>
+        <h1>Please Enter the following Information:</h1>
+            <form action="result">
+                <div class="form">
+                    <div class="form-items">
+                        <input type="text" class="input" name="n1" id="Age" placeholder="Age">
+                    </div>
+		            <div class="form-items">
+                        <input type="text" class="input" name="n2" id="Blood Glucose Fast" placeholder="Blood Glucose">
+                    </div>
+		            <div class="form-items">
+                        <input type="text" class="input" name="n3" id="Blood Glucose PP" placeholder="Blood Glucose PP">
+                    </div>
+		            <div class="form-items">
+                        <input type="text" class="input" name="n4" id="Plasma_R" placeholder="Plasma_R">
+                    </div>
+		            <div class="form-items">
+                        <input type="text" class="input" name="n5" id="Plasma_F" placeholder="Plasma_F">
+                    </div>
+		            <div class="form-items">
+                        <input type="text" class="input" name="n6" id="Hba1c" placeholder="Hba1c">
+                    </div>
+
+              <div align="center">
+                <button type="submit"  value="Submit" class="btn">Submit<i class="fas fa-arrow-right">      </i>
+                </button>
+                <button  type="reset"  value="reset" class="btn">Clear<i class="fas fa-arrow-right">     </i>
+                </button>
+            </div>
+            </form>
+
+
+    </div>
+</body>
+
+</html>

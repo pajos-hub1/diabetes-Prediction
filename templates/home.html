@@ -1,0 +1,64 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style type= text/css>
+    div{
+        color: 'white'
+        }
+        h1{
+            color: blue;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 200px;
+
+        }
+
+        h2{
+            color: 'white';
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 400px;
+            font-family: fantasy;
+
+        }
+        body{
+        background-image: url("{% static '/images/daibetes.jpg' %}");
+        background-image: url("../static/images/daibetes1.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background:linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+        height: 500px
+        }
+        input[type=submit]{
+            background-color: blue;
+            border: 2px;
+            color: white;
+            padding: 16px 32px;
+            cursor: pointer;
+            margin-top: 15px;
+
+        }
+     
+        </style>
+
+</head>
+<body>
+<div align = 'center'>
+    <h1>
+        WELCOME TO DIABETES PREDICITON SYSTEM 
+    </h1>
+    <form action = "predict">
+        <input type= "submit" value = "Let's get started"> 
+    </form>
+</div>
+    
+</body>
+
+</html>
